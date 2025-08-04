@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Inmobiliaria</title>
+    <style>
+        body {
+            background-color: #804404; 
+            color: #e5ff00;
+        }
+        a:link, a:visited {
+            color: #00ff99; 
+        }
+        a:active {
+            color: #0059a1; 
+            input[type="text"], textarea {
+  border: 1px solid #C5C5C5;
+  font-family: Arial;
+  font-size: 12px;
+  color: #666666;
+  padding: 5px;
+}
+
+input[type="submit"], input[type="reset"] {
+  border: 1px solid #C5C5C5;
+  font-family: Arial;
+  font-size: 12px;
+  color: #666666;
+  padding: 5px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+        }
+    </style>
+</head>
+<body>
+    <h1>Inmobiliaria</h1>
+    <a name="inicio"></a>
+    <img src="imagenes/inmobiliariaLogo.jpg" alt="Logo" width="200" height="120">
+    <p>Dirección: Ciudad de Neuquen, Dr. Ramon 1500</p>
+    <p>Email: <a href="inmobiliaria@gmail.com">inmobiliaria@gmail.com</a></p>
+    <p>Teléfono: 7292197280</p>
+
+    <h2>Inmuebles destacados</h2>
+    <a href="#inmueble1">
+        <img src="imagenes/c1+.jpg" alt="Inmueble 1" width="150" height="100">
+    </a>
+    <a href="#inmueble2">
+        <img src="imagenes/c2+.jpg" alt="Inmueble 2" width="150" height="100">
+    </a>
+    <a href="#inmueble3">
+        <img src="imagenes/c4+.jpg" alt="Inmueble 3" width="150" height="100">
+    </a>
+    <p>¡Visita nuestras propiedades y encuentra tu hogar soñado!</p>
+    <img src="imagenes/c3+.jpg" alt="Imagen externa" width="500" height="300">
+   
+    <Form>
+        <label for="n1">Nombre:</label> <br>
+<input type="text" maxlength="25"> <br>
+<label for="n1">Apellido:</label> <br>
+<input type="text" maxlength="25"> <br>
+<label for="n1">Direccion:</label> <br>
+<textarea name="n1" maxlength="30"></textarea> <br>
+<label for="n1">Telefono:</label> <br>
+<input type="text" maxlength="15" value="0299~"> <br>
+<h3>¿Que operacion desea Hacer?</h3>
+<input type="radio"name="n1"  /> Alquiler <br>
+<input type="radio"name="n1" checked /> Compra <br> 
+<h3>¿En que zona desea el inmueble?</h3>
+<input type="checkbox"name="n2" checked />Centro <br>
+<input type="checkbox"name="n3"  />Norte <br> 
+<input type="checkbox"name="n4" checked /> Sur <br>  <br>
+<label for="n1"><h3>Describa el inmueble que busca:</h3></label>
+<textarea></textarea> <br> <br>
+<input type="submit"> 
+    <input type="reset"/> <br>
+    </Form>
+</body>
+</html>

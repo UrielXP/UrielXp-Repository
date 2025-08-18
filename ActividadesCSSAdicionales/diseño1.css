@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top {
+  background: #666;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.contenido {
+  display: flex;
+  height: 400px;
+}
+
+.izquierda, .centro, .derecha {
+  background: #888;
+  color: black;
+  padding: 10px;
+}
+
+.izquierda {
+  width: 20%;
+}
+
+.centro {
+  width: 60%;
+}
+
+.derecha {
+  width: 20%;
+}

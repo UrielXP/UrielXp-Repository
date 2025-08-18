@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top, .pie {
+  background: #666;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.contenido {
+  display: flex;
+  height: 70vh;
+}
+
+.izquierda, .centro {
+  background: #888;
+  color: black;
+  padding: 10px;
+}
+
+.izquierda {
+  width: 30%;
+}
+
+.centro {
+  width: 70%;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Colores</title>
+</head>
+<body>
+  <h2>Colores</h2>
+  <ul id="listaColores">
+    <li>Blanco</li>
+    <li>Negro</li>
+    <li>Azul</li>
+    <li>Rojo</li>
+    <li>Amarillo</li>
+  </ul>
+
+  <script>
+    const lista = document.getElementById("listaColores");
+    const items = lista.getElementsByTagName("li");
+
+    const colores = {
+      "blanco": "white",
+      "negro": "black",
+      "azul": "blue",
+      "rojo": "red",
+      "amarillo": "yellow"
+    };
+
+    for (let item of items) {
+      item.onmouseover = function() {
+        const colorTexto = item.innerText.toLowerCase();
+        lista.style.backgroundColor = colores[colorTexto];
+      };
+
+      item.onmouseout = function() {
+        lista.style.backgroundColor = "white"; // vuelve a blanco
+      };
+    }
+  </script>
+</body>
+</html>

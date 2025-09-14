@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Provincias</title></head>
+<body>
+<ul>
+<li onclick="toggle(this)">Neuquén<ul><li>Neuquén</li><li>Zapala</li><li>San Martin</li><li>Junin</li></ul></li>
+<li onclick="toggle(this)">Rio Negro<ul><li>Cipolletti</li><li>Fernandez Oro</li><li>Roca</li><li>Cinco Saltos</li><li>Allen</li></ul></li>
+<li onclick="toggle(this)">Buenos Aires<ul><li>La Plata</li><li>Mar del Plata</li><li>Necochea</li></ul></li>
+</ul>
+<script>
+function toggle(li){
+  let ul=li.querySelector("ul");
+  if(ul.style.display==="none"){ ul.style.display="block"; li.style.textDecoration="none"; }
+  else{ ul.style.display="none"; li.style.textDecoration="underline"; }
+}
+</script>
+</body>
+</html>

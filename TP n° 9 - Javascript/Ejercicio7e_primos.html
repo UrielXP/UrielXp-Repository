@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Primos</title></head>
+<body>
+<div id="contenedor"></div>
+<script>
+function esPrimo(n){ if(n<2)return false; for(let i=2;i<=Math.sqrt(n);i++){ if(n%i===0) return false;} return true;}
+let div=document.getElementById("contenedor");
+for(let i=2;i<100;i++){ if(esPrimo(i)) div.innerHTML+=i+" "; }
+</script>
+</body>
+</html>

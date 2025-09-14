@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <script src="EjJavaScript5.js"></script>
+</head>
+<body>
+  <h2>Calculadora</h2>
+  <button onclick="operar('suma')">Suma</button>
+  <button onclick="operar('resta')">Resta</button>
+  <button onclick="operar('division')">División</button>
+  <button onclick="operar('multiplicacion')">Multiplicación</button>
+  <button onclick="operar('potencia')">Potencia</button>
+  <button onclick="operar('cuadrado')">Cuadrado</button>
+  <br><br>
+  <textarea id="resultado" rows="5" cols="30"></textarea>
+
+  <script>
+    function operar(op) {
+      let x = parseFloat(prompt("Ingrese primer número:"));
+      let y = (op !== 'cuadrado') ? parseFloat(prompt("Ingrese segundo número:")) : null;
+      let res;
+
+      switch(op){
+        case 'suma': res = suma(x,y); break;
+        case 'resta': res = resta(x,y); break;
+        case 'division': res = division(x,y); break;
+        case 'multiplicacion': res = multiplicacion(x,y); break;
+        case 'potencia': res = potencia(x,y); break;
+        case 'cuadrado': res = cuadrado(x); break;
+      }
+      document.getElementById("resultado").value += op + ": " + res + "\n";
+    }
+  </script>
+</body>
+</html>

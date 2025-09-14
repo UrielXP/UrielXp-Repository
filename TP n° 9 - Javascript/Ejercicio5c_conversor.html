@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor Monetario</title>
+</head>
+<body>
+  <h2>Conversor Monetario</h2>
+  <button onclick="convertir('pesoDolar')">Pesos a Dólares</button>
+  <button onclick="convertir('dolarPeso')">Dólares a Pesos</button>
+  <button onclick="convertir('pesoReal')">Pesos a Reales</button>
+  <button onclick="convertir('realPeso')">Reales a Pesos</button>
+  <button onclick="convertir('pesoEuro')">Pesos a Euros</button>
+  <button onclick="convertir('euroPeso')">Euros a Pesos</button>
+  <br><br>
+  <div id="resultado"></div>
+
+  <script>
+    const tasa = {pesoDolar:0.0012, dolarPeso:850, pesoReal:0.005, realPeso:200, pesoEuro:0.0011, euroPeso:900};
+    function convertir(tipo){
+      let monto = parseFloat(prompt("Ingrese monto:"));
+      let res = monto * tasa[tipo];
+      document.getElementById("resultado").innerText = tipo + ": " + res.toFixed(2);
+    }
+  </script>
+</body>
+</html>

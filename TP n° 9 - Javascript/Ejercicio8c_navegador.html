@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Navegador</title></head>
+<body>
+<script>
+let ua=navigator.userAgent;
+if(ua.includes("MSIE")||ua.includes("Trident")){ window.location="http://www.microsoft.com/ie"; }
+else if(ua.includes("Firefox")){ window.location="http://www.mozilla.com/firefox/"; }
+else if(ua.includes("Konqueror")){ window.location="http://konqueror.org"; }
+else{ document.write("Browser desconocido"); }
+</script>
+</body>
+</html>

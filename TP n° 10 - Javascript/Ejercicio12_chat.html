@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Ejercicio 12 Chat</title></head>
+<body>
+<h2>CHAT</h2>
+<form onsubmit="enviarMensaje(); return false;">
+  Usuario: <input type="text" id="usuario" required><br><br>
+  Mensaje: <textarea id="mensaje" required></textarea><br><br>
+  <button type="submit">Enviar mensaje</button>
+</form>
+<div id="chatbox" style="border:1px solid #000; padding:10px; margin-top:10px; width:300px; height:200px; overflow-y:auto;"></div>
+
+<script>
+function enviarMensaje(){
+  let usuario=document.getElementById("usuario").value;
+  let mensaje=document.getElementById("mensaje").value;
+  let chat=document.getElementById("chatbox");
+  chat.innerHTML += "<p><b>" + usuario + ":</b> " + mensaje + "</p>";
+  document.getElementById("mensaje").value="";
+  document.getElementById("mensaje").focus();
+}
+</script>
+</body>
+</html>

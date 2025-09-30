@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Ejercicio 11b Edad</title></head>
+<body>
+<button onclick="calcular()">Calcular edad</button>
+<div id="resultado"></div>
+<script>
+function calcular(){
+  let anio = parseInt(prompt("Ingrese su año de nacimiento:"));
+  let edad = new Date().getFullYear() - anio;
+  document.getElementById("resultado").innerText = "Su edad es " + edad;
+}
+</script>
+</body>
+</html>

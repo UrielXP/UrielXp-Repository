@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Ejercicio 11a Fecha</title></head>
+<body>
+<div id="info"></div>
+<script>
+let ahora = new Date();
+document.write("<p>Fecha y hora actual: " + ahora + "</p>");
+
+let navidad = new Date(ahora.getFullYear(),11,25);
+if(ahora > navidad){ navidad.setFullYear(navidad.getFullYear()+1); }
+let diff = navidad - ahora;
+let dias = Math.floor(diff/(1000*60*60*24));
+let horas = Math.floor((diff/(1000*60*60))%24);
+let minutos = Math.floor((diff/(1000*60))%60);
+let segundos = Math.floor((diff/1000)%60);
+document.write("<p>Faltan " + dias + " días, " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos para Navidad</p>");
+</script>
+</body>
+</html>

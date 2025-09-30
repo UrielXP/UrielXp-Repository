@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Ejercicio 9 String</title></head>
+<body>
+<script>
+let mensaje = prompt("Ingrese un mensaje:");
+document.write("<p>Mayúsculas: " + mensaje.toUpperCase() + "</p>");
+document.write("<p>Minúsculas: " + mensaje.toLowerCase() + "</p>");
+document.write("<p>Sub-mensaje (pos 5, largo 10): " + mensaje.substring(5,15) + "</p>");
+if(mensaje.includes("hola")) document.write("<p>hola que tal</p>");
+let sinEspacios = mensaje.replace(/\s+/g, "");
+let sinHola = sinEspacios.replace(/hola/gi, "");
+document.write("<p>Sin espacios y sin 'hola': " + sinHola + "</p>");
+
+// Traducciones simples
+let traducciones = { "my":"mi", "hello":"hola", "name":"nombre" };
+let traducido = mensaje;
+for(let key in traducciones){
+  let re = new RegExp(key, "gi");
+  traducido = traducido.replace(re, traducciones[key]);
+}
+document.write("<p>Traducido: " + traducido + "</p>");
+</script>
+</body>
+</html>
